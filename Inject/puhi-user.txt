@@ -1,0 +1,2 @@
+phil@inject:~$ cat user.txt 
+936be8b25b041e407b32786709926cc4

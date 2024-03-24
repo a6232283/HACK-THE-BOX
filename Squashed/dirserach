@@ -1,0 +1,19 @@
+root@kali:~# dirsearch -u http://10.10.11.191/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
+
+  _|. _ _  _  _  _ _|_    v0.4.1                                                                                                                           
+ (_||| _) (/_(_|| (_| )                                                                                                                                    
+                                                                                                                                                           
+Extensions: php, aspx, jsp, html, js | HTTP method: GET | Threads: 30 | Wordlist size: 220520
+
+Output File: /root/.dirsearch/reports/10.10.11.191/_23-04-05_04-03-55.txt
+
+Error Log: /root/.dirsearch/logs/errors-23-04-05_04-03-55.log
+
+Target: http://10.10.11.191/
+                                                                                                                                                           
+[04:03:56] Starting: 
+[04:04:02] 301 -  313B  - /images  ->  http://10.10.11.191/images/
+[04:04:07] 301 -  310B  - /css  ->  http://10.10.11.191/css/    
+[04:04:11] 301 -  309B  - /js  ->  http://10.10.11.191/js/      
+[04:20:04] 403 -  277B  - /server-status                                                                                                   
+87.98% | 109 req/s - Errors: 5 - Last request to: 10carbon75   

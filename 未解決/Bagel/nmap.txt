@@ -1,0 +1,189 @@
+└─# nmap -sV -A 10.10.11.201
+Starting Nmap 7.93 ( https://nmap.org ) at 2023-06-03 07:42 EDT
+Nmap scan report for 10.10.11.201
+Host is up (0.28s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 8.8 (protocol 2.0)
+| ssh-hostkey: 
+|   256 6e4e1341f2fed9e0f7275bededcc68c2 (ECDSA)
+|_  256 80a7cd10e72fdb958b869b1b20652a98 (ED25519)
+5000/tcp open  upnp?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Server: Microsoft-NetCore/2.0
+|     Date: Sat, 03 Jun 2023 11:42:30 GMT
+|     Connection: close
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Server: Microsoft-NetCore/2.0
+|     Date: Sat, 03 Jun 2023 11:42:48 GMT
+|     Connection: close
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html
+|     Server: Microsoft-NetCore/2.0
+|     Date: Sat, 03 Jun 2023 11:42:59 GMT
+|     Content-Length: 52
+|     Connection: close
+|     Keep-Alive: true
+|     <h1>Bad Request (Invalid request line (parts).)</h1>
+|   RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html
+|     Server: Microsoft-NetCore/2.0
+|     Date: Sat, 03 Jun 2023 11:42:31 GMT
+|     Content-Length: 54
+|     Connection: close
+|     Keep-Alive: true
+|     <h1>Bad Request (Invalid request line (version).)</h1>
+|   SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html
+|     Server: Microsoft-NetCore/2.0
+|     Date: Sat, 03 Jun 2023 11:43:00 GMT
+|     Content-Length: 52
+|     Connection: close
+|     Keep-Alive: true
+|     <h1>Bad Request (Invalid request line (parts).)</h1>
+|   TLSSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html
+|     Server: Microsoft-NetCore/2.0
+|     Date: Sat, 03 Jun 2023 11:43:01 GMT
+|     Content-Length: 52
+|     Connection: close
+|     Keep-Alive: true
+|_    <h1>Bad Request (Invalid request line (parts).)</h1>
+8000/tcp open  http-alt Werkzeug/2.2.2 Python/3.10.9
+|_http-server-header: Werkzeug/2.2.2 Python/3.10.9
+|_http-title: Did not follow redirect to http://bagel.htb:8000/?page=index.html
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 NOT FOUND
+|     Server: Werkzeug/2.2.2 Python/3.10.9
+|     Date: Sat, 03 Jun 2023 11:42:31 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 207
+|     Connection: close
+|     <!doctype html>
+|     <html lang=en>
+|     <title>404 Not Found</title>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+|   GetRequest: 
+|     HTTP/1.1 302 FOUND
+|     Server: Werkzeug/2.2.2 Python/3.10.9
+|     Date: Sat, 03 Jun 2023 11:42:25 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 263
+|     Location: http://bagel.htb:8000/?page=index.html
+|     Connection: close
+|     <!doctype html>
+|     <html lang=en>
+|     <title>Redirecting...</title>
+|     <h1>Redirecting...</h1>
+|     <p>You should be redirected automatically to the target URL: <a href="http://bagel.htb:8000/?page=index.html">http://bagel.htb:8000/?page=index.html</a>. If not, click the link.
+|   Socks5: 
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+|     "http://www.w3.org/TR/html4/strict.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 400</p>
+|     <p>Message: Bad request syntax ('
+|     ').</p>
+|     <p>Error code explanation: HTTPStatus.BAD_REQUEST - Bad request syntax or unsupported method.</p>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5000-TCP:V=7.93%I=7%D=6/3%Time=647B2726%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,73,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20Microsoft-
+SF:NetCore/2\.0\r\nDate:\x20Sat,\x2003\x20Jun\x202023\x2011:42:30\x20GMT\r
+SF:\nConnection:\x20close\r\n\r\n")%r(RTSPRequest,E8,"HTTP/1\.1\x20400\x20
+SF:Bad\x20Request\r\nContent-Type:\x20text/html\r\nServer:\x20Microsoft-Ne
+SF:tCore/2\.0\r\nDate:\x20Sat,\x2003\x20Jun\x202023\x2011:42:31\x20GMT\r\n
+SF:Content-Length:\x2054\r\nConnection:\x20close\r\nKeep-Alive:\x20true\r\
+SF:n\r\n<h1>Bad\x20Request\x20\(Invalid\x20request\x20line\x20\(version\)\
+SF:.\)</h1>")%r(HTTPOptions,73,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServ
+SF:er:\x20Microsoft-NetCore/2\.0\r\nDate:\x20Sat,\x2003\x20Jun\x202023\x20
+SF:11:42:48\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(Help,E6,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nServer:\x20Mi
+SF:crosoft-NetCore/2\.0\r\nDate:\x20Sat,\x2003\x20Jun\x202023\x2011:42:59\
+SF:x20GMT\r\nContent-Length:\x2052\r\nConnection:\x20close\r\nKeep-Alive:\
+SF:x20true\r\n\r\n<h1>Bad\x20Request\x20\(Invalid\x20request\x20line\x20\(
+SF:parts\)\.\)</h1>")%r(SSLSessionReq,E6,"HTTP/1\.1\x20400\x20Bad\x20Reque
+SF:st\r\nContent-Type:\x20text/html\r\nServer:\x20Microsoft-NetCore/2\.0\r
+SF:\nDate:\x20Sat,\x2003\x20Jun\x202023\x2011:43:00\x20GMT\r\nContent-Leng
+SF:th:\x2052\r\nConnection:\x20close\r\nKeep-Alive:\x20true\r\n\r\n<h1>Bad
+SF:\x20Request\x20\(Invalid\x20request\x20line\x20\(parts\)\.\)</h1>")%r(T
+SF:erminalServerCookie,E6,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-T
+SF:ype:\x20text/html\r\nServer:\x20Microsoft-NetCore/2\.0\r\nDate:\x20Sat,
+SF:\x2003\x20Jun\x202023\x2011:43:00\x20GMT\r\nContent-Length:\x2052\r\nCo
+SF:nnection:\x20close\r\nKeep-Alive:\x20true\r\n\r\n<h1>Bad\x20Request\x20
+SF:\(Invalid\x20request\x20line\x20\(parts\)\.\)</h1>")%r(TLSSessionReq,E6
+SF:,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/html\r\nS
+SF:erver:\x20Microsoft-NetCore/2\.0\r\nDate:\x20Sat,\x2003\x20Jun\x202023\
+SF:x2011:43:01\x20GMT\r\nContent-Length:\x2052\r\nConnection:\x20close\r\n
+SF:Keep-Alive:\x20true\r\n\r\n<h1>Bad\x20Request\x20\(Invalid\x20request\x
+SF:20line\x20\(parts\)\.\)</h1>");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8000-TCP:V=7.93%I=7%D=6/3%Time=647B2721%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,1EA,"HTTP/1\.1\x20302\x20FOUND\r\nServer:\x20Werkzeug/2\.2\.2\x
+SF:20Python/3\.10\.9\r\nDate:\x20Sat,\x2003\x20Jun\x202023\x2011:42:25\x20
+SF:GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\
+SF:x20263\r\nLocation:\x20http://bagel\.htb:8000/\?page=index\.html\r\nCon
+SF:nection:\x20close\r\n\r\n<!doctype\x20html>\n<html\x20lang=en>\n<title>
+SF:Redirecting\.\.\.</title>\n<h1>Redirecting\.\.\.</h1>\n<p>You\x20should
+SF:\x20be\x20redirected\x20automatically\x20to\x20the\x20target\x20URL:\x2
+SF:0<a\x20href=\"http://bagel\.htb:8000/\?page=index\.html\">http://bagel\
+SF:.htb:8000/\?page=index\.html</a>\.\x20If\x20not,\x20click\x20the\x20lin
+SF:k\.\n")%r(FourOhFourRequest,184,"HTTP/1\.1\x20404\x20NOT\x20FOUND\r\nSe
+SF:rver:\x20Werkzeug/2\.2\.2\x20Python/3\.10\.9\r\nDate:\x20Sat,\x2003\x20
+SF:Jun\x202023\x2011:42:31\x20GMT\r\nContent-Type:\x20text/html;\x20charse
+SF:t=utf-8\r\nContent-Length:\x20207\r\nConnection:\x20close\r\n\r\n<!doct
+SF:ype\x20html>\n<html\x20lang=en>\n<title>404\x20Not\x20Found</title>\n<h
+SF:1>Not\x20Found</h1>\n<p>The\x20requested\x20URL\x20was\x20not\x20found\
+SF:x20on\x20the\x20server\.\x20If\x20you\x20entered\x20the\x20URL\x20manua
+SF:lly\x20please\x20check\x20your\x20spelling\x20and\x20try\x20again\.</p>
+SF:\n")%r(Socks5,213,"<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML
+SF:\x204\.01//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\"http://www\.w3\.org/
+SF:TR/html4/strict\.dtd\">\n<html>\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x
+SF:20\x20\x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"tex
+SF:t/html;charset=utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Error\x
+SF:20response</title>\n\x20\x20\x20\x20</head>\n\x20\x20\x20\x20<body>\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20<h1>Error\x20response</h1>\n\x20\x20\x20\
+SF:x20\x20\x20\x20\x20<p>Error\x20code:\x20400</p>\n\x20\x20\x20\x20\x20\x
+SF:20\x20\x20<p>Message:\x20Bad\x20request\x20syntax\x20\('\\x05\\x04\\x00
+SF:\\x01\\x02\\x80\\x05\\x01\\x00\\x03'\)\.</p>\n\x20\x20\x20\x20\x20\x20\
+SF:x20\x20<p>Error\x20code\x20explanation:\x20HTTPStatus\.BAD_REQUEST\x20-
+SF:\x20Bad\x20request\x20syntax\x20or\x20unsupported\x20method\.</p>\n\x20
+SF:\x20\x20\x20</body>\n</html>\n");
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.93%E=4%D=6/3%OT=22%CT=1%CU=40389%PV=Y%DS=2%DC=T%G=Y%TM=647B27A3
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A)SEQ(
+OS:SP=107%GCD=1%ISR=10A%TI=Z%CI=Z%TS=A)OPS(O1=M53CST11NW7%O2=M53CST11NW7%O3
+OS:=M53CNNT11NW7%O4=M53CST11NW7%O5=M53CST11NW7%O6=M53CST11)WIN(W1=FE88%W2=F
+OS:E88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M53CNNSNW
+OS:7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF
+OS:=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=
+OS:%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=
+OS:0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RI
+OS:PCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT       ADDRESS
+1   290.61 ms 10.10.14.1
+2   290.74 ms 10.10.11.201
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 143.10 seconds

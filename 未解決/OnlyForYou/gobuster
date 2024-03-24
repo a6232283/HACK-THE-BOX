@@ -1,0 +1,20 @@
+root@kali:~/SecLists/Discovery/DNS# gobuster vhost -u http://only4you.htb/ -w subdomains-top1million-110000.txt
+===============================================================
+Gobuster v3.4
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:             http://only4you.htb/
+[+] Method:          GET
+[+] Threads:         10
+[+] Wordlist:        subdomains-top1million-110000.txt
+[+] User Agent:      gobuster/3.4
+[+] Timeout:         10s
+[+] Append Domain:   false
+===============================================================
+2023/05/07 02:11:08 Starting gobuster in VHOST enumeration mode
+===============================================================
+Progress: 114439 / 114442 (100.00%)
+===============================================================
+Fount:beta.only4you.htb OK
+2023/05/07 03:08:35 Finished
+===============================================================

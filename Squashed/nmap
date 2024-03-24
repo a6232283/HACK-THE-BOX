@@ -1,0 +1,14 @@
+root@kali:~# nmap -sV 10.10.11.191
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-04-05 03:56 EDT
+Nmap scan report for 10.10.11.191
+Host is up (0.30s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http    Apache httpd 2.4.41 ((Ubuntu))
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+2049/tcp open  nfs_acl 3 (RPC #100227)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 14.57 seconds

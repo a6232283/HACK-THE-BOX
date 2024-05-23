@@ -1,0 +1,10 @@
+root@kali:~# john --wordlist:/usr/share/wordlists/rockyou.txt passwd                                                        
+Using default input encoding: UTF-8
+Loaded 1 password hash (bcrypt [Blowfish 32/64 X3])
+Cost 1 (iteration count) is 1024 for all loaded hashes
+Will run 4 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+funkymonkey      (?)     
+1g 0:00:01:15 DONE (2023-05-16 23:24) 0.01319g/s 112.5p/s 112.5c/s 112.5C/s 474747..coucou
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed. 

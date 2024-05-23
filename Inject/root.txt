@@ -1,3 +1,0 @@
-root@inject:~# cat root.txt     
-cat root.txt
-d43d53737c5ec8dda8b18dfe222bfabe

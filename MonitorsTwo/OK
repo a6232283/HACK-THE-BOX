@@ -1,5 +1,0 @@
-rcus@monitorstwo:~$ id
-uid=1000(marcus) gid=1000(marcus) groups=1000(marcus)
-marcus@monitorstwo:~$ cat user.txt
-07c8d43a522abad4c99c35cfa071a021
-marcus@monitorstwo:~$ 

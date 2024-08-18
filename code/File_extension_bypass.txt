@@ -1,0 +1,13 @@
+#常見副檔名繞過測試名稱
+png
+jpg
+gif
+txt
+php
+ph3
+ph4
+ph5
+php3
+php4
+php5
+png.php

